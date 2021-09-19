@@ -10,32 +10,32 @@
 
 
     <EditText
-        android:id="@+id/inpR2"
-        android:layout_width="73dp"
-        android:layout_height="27dp"
+        android:id="@+id/edtR2"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="130dp"
         android:ems="10"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inpR1" />
+        app:layout_constraintTop_toBottomOf="@+id/edtR1" />
 
     <EditText
-        android:id="@+id/inpR1"
-        android:layout_width="73dp"
-        android:layout_height="27dp"
+        android:id="@+id/edtR1"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="130dp"
         android:ems="10"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inpVin" />
+        app:layout_constraintTop_toBottomOf="@+id/edtVin" />
 
     <EditText
-        android:id="@+id/inpVin"
-        android:layout_width="73dp"
-        android:layout_height="27dp"
-        android:layout_marginTop="35dp"
+        android:id="@+id/edtVin"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="130dp"
         android:ems="10"
         android:inputType="numberDecimal"
@@ -44,10 +44,11 @@
 
     <TextView
         android:id="@+id/txtVin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="35dp"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
         android:text="Vin:"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,10 +56,11 @@
 
     <TextView
         android:id="@+id/txtR1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="130dp"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="124dp"
         android:layout_marginTop="20dp"
+        android:gravity="center"
         android:text="R1:"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,10 +68,11 @@
 
     <TextView
         android:id="@+id/txtR2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="130dp"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="124dp"
         android:layout_marginTop="20dp"
+        android:gravity="center"
         android:text="R2:"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -92,11 +95,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:backgroundTint="@color/yellowrec"
+        android:onClick="calculate"
         android:text="Calculate"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inpR2" />
+        app:layout_constraintTop_toBottomOf="@+id/edtR2" />
 
     <ImageView
         android:id="@+id/imgVoltDiv"
@@ -131,6 +135,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/yellowrectangle" />
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="87dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="132dp"
+        android:gravity="center"
+        android:text=""
+        android:textAlignment="textStart"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnConvert" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
