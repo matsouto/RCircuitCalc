@@ -9,10 +9,12 @@ import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 public class MainActivity extends AppCompatActivity {
 
     EditText edtVin, edtR1, edtR2; // Import the input values
-    TextView txtResult; // Import the output value
+    TextView txtResult, txtVout; // Import the output value
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         edtR2 = findViewById(R.id.edtR2);   // Attributing EditText edtR2 to the view
 
         txtResult = findViewById(R.id.txtResult); // Attributing EditText txtVout to the view
+        txtVout = findViewById(R.id.txtVout);
     }
 
     public void calculate(View view) {
@@ -44,7 +47,13 @@ public class MainActivity extends AppCompatActivity {
 
         double vout = vin * (r2/(r1+r2));
 
-        txtResult.setText(vout + " ohm");
+        // Format the output with 2 decimal numbers
+        DecimalFormat decimal = new DecimalFormat("0.00");
+        String trueValue = decimal.format(vout);
+
+        // Set the text output from each view
+        txtResult.setText(trueValue + " ohm");
+        txtVout.setText("Vout:");
     }
 
 
