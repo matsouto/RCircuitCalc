@@ -1,5 +1,5 @@
 # RCircuitCalc
-Calculator app for current divider circuits. Just for practice.
+Calculator app for voltage divider circuits. Just for practice.
 
 ## How it works:
 The app takes usage of the Kirchhoff’s Voltage Law (KVL) and Ohm's Law to calculate the resulting output voltage from the voltage divider circuit according to the equation:
